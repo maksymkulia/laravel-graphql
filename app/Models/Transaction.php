@@ -2,22 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Transaction extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
     /**
      * User Roles
      *
      * @var int
      */
-    const USER_ROLE = 0;
-    const ADMIN_ROLE = 1;
+    const TRANSACTION_DEBIT = 0;
+    const TRANSACTION_CREDIT = 1;
 
     /**
      * The table associated with the model.
@@ -46,10 +44,18 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
+        'type',
+        'amount',
         'password',
         'role'
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

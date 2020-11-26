@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eee0799-878e-4d5c-9386-af7165d1e12e" name="Default Changelist" comment="" />
+    <list default="true" id="1eee0799-878e-4d5c-9386-af7165d1e12e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -118,6 +152,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/rebing/graphql-laravel" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kpYznIaItzpDqu8dLDA7jLH1Rd" />
@@ -126,6 +162,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -147,11 +184,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606399266892</updated>
-      <workItem from="1606399269287" duration="395000" />
+      <workItem from="1606399269287" duration="7680000" />
+      <workItem from="1606411529311" duration="6521000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1680" y="-155" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606410252174">
+      <screen x="-2560" y="-540" width="2560" height="1440" />
+    </state>
+    <state x="-1680" y="-155" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-2560.-540.2560.1440@-2560.-540.2560.1440" timestamp="1606410252174" />
+    <state x="-1715" y="-279" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606407246084">
+      <screen x="-2560" y="-540" width="2560" height="1440" />
+    </state>
+    <state x="-1715" y="-279" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900/-2560.-540.2560.1440@-2560.-540.2560.1440" timestamp="1606407246084" />
+    <state x="-1620" y="-87" key="NewPhpClassDialog" timestamp="1606415456331">
+      <screen x="-2560" y="-540" width="2560" height="1440" />
+    </state>
+    <state x="-1620" y="-87" key="NewPhpClassDialog/0.0.1440.900/-2560.-540.2560.1440@-2560.-540.2560.1440" timestamp="1606415456331" />
   </component>
 </project>

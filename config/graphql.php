@@ -10,7 +10,7 @@ use example\Type\ExampleType;
 return [
 
     // The prefix for routes
-    'prefix' => 'graphql',
+    'prefix' => 'api/v1',
 
     // The routes to make GraphQL request. Either a string that will apply
     // to both query and mutation or an array containing the key 'query' and/or
@@ -101,7 +101,8 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'example_query' => ExampleQuery::class,
+                'user' => App\GraphQL\Queries\UserQuery::class,
+                'users' => App\GraphQL\Queries\UsersQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
@@ -121,7 +122,7 @@ return [
     // ]
     //
     'types' => [
-        // 'example'           => ExampleType::class,
+        'User' => App\GraphQL\Types\UserType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
     ],
@@ -173,7 +174,7 @@ return [
      * Config for GraphiQL (see (https://github.com/graphql/graphiql).
      */
     'graphiql' => [
-        'prefix' => '/graphiql',
+        'prefix' => '/graphql',
         'controller' => \Rebing\GraphQL\GraphQLController::class.'@graphiql',
         'middleware' => [],
         'view' => 'graphql::graphiql',
