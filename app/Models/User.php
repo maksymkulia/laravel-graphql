@@ -14,7 +14,7 @@ class User extends Authenticatable
     /**
      * User Roles
      *
-     * @var int
+     * @const
      */
     const USER_ROLE = 0;
     const ADMIN_ROLE = 1;
@@ -24,7 +24,7 @@ class User extends Authenticatable
      *
      * @var string
      */
-    protected $table = 'transactions';
+    protected $table = 'users';
 
     /**
      * The primary key associated with the table.
@@ -48,8 +48,15 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
-        'role'
+        'role',
     ];
+
+    /**
+     * Get the transactions of the user.
+     */
+    public function transactions()
+    {
+        return $this->hasMany('App\Models\Transaction');
+    }
 
 }

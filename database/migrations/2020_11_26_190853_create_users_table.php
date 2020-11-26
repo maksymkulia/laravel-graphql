@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name')->unique()->comment('Full name of user');
             $table->string('email')->unique()->comment('Email of user');
-            $table->smallInteger('role')->default(User::USER_ROLE)->comment('By default USER');
+            $table->tinyInteger('role')->default(User::USER_ROLE)->comment('By default USER');
             $table->timestamps();
         });
     }

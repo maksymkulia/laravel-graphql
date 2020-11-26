@@ -10,9 +10,9 @@ class Transaction extends Model
     use HasFactory;
 
     /**
-     * User Roles
+     * Transaction types
      *
-     * @var int
+     * @const
      */
     const TRANSACTION_DEBIT = 0;
     const TRANSACTION_CREDIT = 1;
@@ -46,16 +46,14 @@ class Transaction extends Model
     protected $fillable = [
         'type',
         'amount',
-        'password',
-        'role'
+        'user_id'
     ];
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
+     * Get the user that owns the transaction.
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
