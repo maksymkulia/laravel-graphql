@@ -101,7 +101,7 @@ return [
                 'transaction' => App\GraphQL\Queries\TransactionQuery::class,
             ],
             'mutation' => [
-                // 'example_mutation'  => ExampleMutation::class,
+                'createUser'  => \App\GraphQL\Mutations\CreateUserMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],

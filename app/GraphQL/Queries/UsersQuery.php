@@ -25,7 +25,8 @@ class UsersQuery extends Query
         return [
             'id' => ['name' => 'id', 'type' => Type::int()],
             'email' => ['name' => 'email', 'type' => Type::string()],
-            'role' => ['name' => 'role', 'type' => Type::int()]
+            'role' => ['name' => 'role', 'type' => Type::int()],
+            'lim' => ['name' => 'lim', 'type' => Type::int()],
         ];
     }
 
@@ -41,6 +42,10 @@ class UsersQuery extends Query
 
         if (isset($args['role'])) {
             return User::where('role', $args['role'])->get();
+        }
+
+        if (isset($args['lim'])) {
+            return User::orderByDesc('id')->limit($args['lim'])->get();
         }
 
         return User::all();
