@@ -28,8 +28,8 @@ This projects implements a very basic payment emulation mechanism and role manag
 
 ## Tests
 Run ``php artisan test``.
-- Unit tests >60% done.
-- Feature tests in process.
+- Unit tests.
+- Feature tests.
 
 ## Security
 SQLmap tested. Other in process.
