@@ -3,8 +3,9 @@ This projects implements a very basic payment emulation mechanism and role manag
 
 ## LSS
 - This project is covering TDD on Laravel 8 with GraphQL package.
-- No views involved.
+- No views involved, use graphql.
 - Please use PHP 7.4+.
+- No Auth used.
 
 ## Quick start
 1. Run ``git clone https://github.com/maksymkulia/laravel-graphql.git``.
@@ -12,7 +13,7 @@ This projects implements a very basic payment emulation mechanism and role manag
 3. Start you MySQL server.
 4. Setup ``.env`` file with DB parameters.
 5. Run ``php artisan migrate:fresh --seed`` to create initial data in DB.
-6. Go to ``domain.name/api/v1`` to execute GraphQL queries.
+6. Go to ``your-domain-name/api/v1`` to execute GraphQL queries or GraphiQL playground: ``your-domain-name/graphiql``.
 
 ## Structure
 - ``app/GraphQL`` - core logic of GraphQL.
@@ -26,6 +27,7 @@ This projects implements a very basic payment emulation mechanism and role manag
 - Eloquent ORM used all over the project.
 
 ## Tests
+Run ``php artisan test``.
 - Unit tests >60% done.
 - Feature tests in process.
 
