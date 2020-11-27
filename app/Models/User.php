@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -52,11 +52,13 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the transactions of the user.
+     * Get latest transactions of user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function transactions()
     {
-        return $this->hasMany('App\Models\Transaction');
+        return $this->hasMany('App\Models\Transaction')->latest();
     }
 
 }

@@ -2,11 +2,6 @@
 
 declare(strict_types=1);
 
-use example\Mutation\ExampleMutation;
-use example\Query\ExampleQuery;
-use example\Type\ExampleRelationType;
-use example\Type\ExampleType;
-
 return [
 
     // The prefix for routes
@@ -103,6 +98,7 @@ return [
             'query' => [
                 'user' => App\GraphQL\Queries\UserQuery::class,
                 'users' => App\GraphQL\Queries\UsersQuery::class,
+                'transaction' => App\GraphQL\Queries\TransactionQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
@@ -123,6 +119,7 @@ return [
     //
     'types' => [
         'User' => App\GraphQL\Types\UserType::class,
+        'Transaction' => App\GraphQL\Types\TransactionType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
     ],
@@ -174,7 +171,7 @@ return [
      * Config for GraphiQL (see (https://github.com/graphql/graphiql).
      */
     'graphiql' => [
-        'prefix' => '/graphql',
+        'prefix' => '/graphiql',
         'controller' => \Rebing\GraphQL\GraphQLController::class.'@graphiql',
         'middleware' => [],
         'view' => 'graphql::graphiql',

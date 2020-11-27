@@ -51,6 +51,8 @@ class Transaction extends Model
 
     /**
      * Get the user that owns the transaction.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {

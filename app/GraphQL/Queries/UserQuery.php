@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\GraphQL\Queries;
 
 use App\Models\User;
@@ -39,10 +38,5 @@ class UserQuery extends Query
                 'type' => Type::int()
             ],
         ];
-    }
-
-    public function resolve($root, $args)
-    {
-        return User::findOrFail($args['id']);
     }
 }
