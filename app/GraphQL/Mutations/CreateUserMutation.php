@@ -18,7 +18,7 @@ class CreateUserMutation extends Mutation
     {
         return [
             'name' => [
-                'required', 'max:50'
+                'required', 'max:100'
             ],
             'email' => [
                 'required', 'email', 'unique:users,email',
