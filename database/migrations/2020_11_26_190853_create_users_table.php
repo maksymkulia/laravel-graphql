@@ -16,8 +16,11 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique()->comment('Full name of user');
+            $table->string('name')->comment('Full name of user');
             $table->string('email')->unique()->comment('Email of user');
+            $table->string('password')->comment('Password of user bcrypt');
+            $table->string('api_token', 200)->nullable()->default(null)->comment('API token');
+            $table->timestamp('api_token_expiration')->nullable()->default(null)->comment('When API token expires');
             $table->tinyInteger('role')->default(User::USER_ROLE)->comment('By default USER');
             $table->timestamps();
         });

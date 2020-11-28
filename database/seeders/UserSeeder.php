@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -10,9 +12,9 @@ class UserSeeder extends Seeder
     /**
      * Number of seeds
      *
-     * @const
+     * @var int
      */
-    const SEEDS = 500;
+    protected int $seeds = 50;
 
     /**
      * Run the database seeds for regular users.
@@ -21,7 +23,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(self::SEEDS)
+        User::factory($this->seeds)
             ->create();
     }
 }

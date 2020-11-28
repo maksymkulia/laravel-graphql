@@ -1,15 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
 
     /**
      * User Roles
@@ -49,6 +49,16 @@ class User extends Authenticatable
         'name',
         'email',
         'role',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'api_token',
+        'api_token_expiration'
     ];
 
     /**

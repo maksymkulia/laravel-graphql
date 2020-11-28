@@ -11,9 +11,9 @@ class TransactionSeeder extends Seeder
     /**
      * Number of seeds
      *
-     * @const
+     * @var int
      */
-    const SEEDS = 5000;
+    protected int $seeds = 50;
 
     /**
      * Run the database seeds.
@@ -22,7 +22,7 @@ class TransactionSeeder extends Seeder
      */
     public function run(): void
     {
-        Transaction::factory(self::SEEDS)
+        Transaction::factory($this->seeds)
             ->state(new Sequence(
                 ['type' => Transaction::TRANSACTION_DEBIT],
                 ['type' => Transaction::TRANSACTION_CREDIT],
