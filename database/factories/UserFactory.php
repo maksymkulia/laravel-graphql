@@ -6,6 +6,7 @@ namespace Database\Factories;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 
 class UserFactory extends Factory
 {
@@ -33,7 +34,7 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->unique()->name,
             'email' => $this->faker->unique()->safeEmail,
-            'password' => bcrypt($this->defaulPass),
+            'password' => Hash::make($this->defaulPass),
             'api_token' => null,
             'api_token_expiration' => null,
             'role' => User::USER_ROLE,

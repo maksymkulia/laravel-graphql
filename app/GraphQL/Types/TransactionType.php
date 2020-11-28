@@ -11,10 +11,10 @@ use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class TransactionType extends GraphQLType
 {
-    protected $attributes = [
-        'name'          => 'Transaction',
-        'description'   => 'A Transaction',
-        'model'         => Transaction::class
+    protected array $attributes = [
+        'name' => 'Transaction',
+        'description' => 'A Transaction',
+        'model' => Transaction::class
     ];
 
     public function fields(): array
