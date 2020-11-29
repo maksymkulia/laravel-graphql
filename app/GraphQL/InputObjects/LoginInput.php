@@ -23,13 +23,13 @@ class LoginInput extends InputType
     public function fields(): array
     {
         return [
-            'comment' => [
+            'email' => [
                 'name' => 'email',
                 'description' => 'Email of user',
                 'type' => Type::string(),
                 'rules' => ['min:3', 'max:150']
             ],
-            'score' => [
+            'password' => [
                 'name' => 'password',
                 'description' => 'Password in open format',
                 'type' => Type::string(),

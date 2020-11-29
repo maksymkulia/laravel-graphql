@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\GraphQL\Mutations;
 
 use App\Models\User;
@@ -10,7 +12,7 @@ use Illuminate\Validation\Rule;
 
 class CreateUserMutation extends Mutation
 {
-    protected $attributes = [
+    protected array $attributes = [
         'name' => 'createUser'
     ];
 

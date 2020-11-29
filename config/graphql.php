@@ -136,6 +136,7 @@ return [
     'types' => [
         'User' => App\GraphQL\Types\UserType::class,
         'Transaction' => App\GraphQL\Types\TransactionType::class,
+        'LoginResponse' => \App\GraphQL\Types\LoginResponseType::class,
         'LoginInput' => \App\GraphQL\InputObjects\LoginInput::class,
     ],
 

@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -61,6 +62,18 @@ class User extends Authenticatable
         'api_token',
         'api_token_expiration'
     ];
+
+    /**
+     * Saves new token
+     *
+     * @param string $token
+     * @return void
+     */
+    public function setApiTokenAttribute(string $token): void
+    {
+        $this->attributes['api_token'] = hash('sha256', $token);
+        $this->attributes['api_token_expiration'] = Carbon::now()->addHours(24);
+    }
 
     /**
      * Get latest transactions of user.
