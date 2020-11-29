@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -62,6 +63,17 @@ class User extends Authenticatable
         'api_token',
         'api_token_expiration'
     ];
+
+    /**
+     * Saves password
+     *
+     * @param string $password
+     * @return void
+     */
+    public function setPasswordAttribute(string $password): void
+    {
+        $this->attributes['password'] = Hash::make($password);
+    }
 
     /**
      * Saves new token

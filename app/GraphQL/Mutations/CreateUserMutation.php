@@ -25,6 +25,9 @@ class CreateUserMutation extends Mutation
             'email' => [
                 'required', 'email', 'unique:users,email',
             ],
+            'password' => [
+                'required', 'min:5', 'max:50',
+            ],
             'role' => [
                 'required', 'int', 'max:1'
             ],
@@ -47,6 +50,10 @@ class CreateUserMutation extends Mutation
                 'name' => 'email',
                 'type' =>  Type::nonNull(Type::string()),
             ],
+            'password' => [
+                'name' => 'password',
+                'type' =>  Type::nonNull(Type::string()),
+            ],
             'role' => [
                 'name' => 'role',
                 'type' =>  Type::nonNull(Type::int()),
@@ -58,6 +65,7 @@ class CreateUserMutation extends Mutation
     {
         $user = new User();
         $user->fill($args);
+        $user->password = $args['password'];
         $user->save();
 
         return $user;

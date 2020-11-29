@@ -109,7 +109,7 @@ return [
         'authenticated' => [
             'query' => [],
             'mutation' => [],
-            'middleware' => ['auth'],
+            'middleware' => ['gauth'],
             'method' => ['get', 'post'],
         ],
         'admin' => [
@@ -119,8 +119,8 @@ return [
             'mutation' => [
                 'createUser'  => \App\GraphQL\Mutations\CreateUserMutation::class,
             ],
-            'middleware' => ['auth', 'admin'],
-            'method' => ['get', 'post'],
+            'middleware' => ['gauth:admin'],
+            'method' => ['post'],
         ],
     ],
 
