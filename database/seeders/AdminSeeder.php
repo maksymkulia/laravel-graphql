@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -10,9 +12,9 @@ class AdminSeeder extends Seeder
     /**
      * Number of seeds
      *
-     * @const
+     * @var int
      */
-    const SEEDS = 2;
+    protected int $seeds = 2;
 
     /**
      * Run the database seeds.
@@ -21,7 +23,7 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(self::SEEDS)
+        User::factory($this->seeds)
             ->create([
                 'role' => User::ADMIN_ROLE
             ]);
