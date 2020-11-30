@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\GraphQL\Mutations;
 
 use App\Models\User;
@@ -10,7 +12,7 @@ use Illuminate\Validation\Rule;
 
 class CreateUserMutation extends Mutation
 {
-    protected $attributes = [
+    protected array $attributes = [
         'name' => 'createUser'
     ];
 
@@ -22,6 +24,9 @@ class CreateUserMutation extends Mutation
             ],
             'email' => [
                 'required', 'email', 'unique:users,email',
+            ],
+            'password' => [
+                'required', 'min:5', 'max:50',
             ],
             'role' => [
                 'required', 'int', 'max:1'
@@ -45,6 +50,10 @@ class CreateUserMutation extends Mutation
                 'name' => 'email',
                 'type' =>  Type::nonNull(Type::string()),
             ],
+            'password' => [
+                'name' => 'password',
+                'type' =>  Type::nonNull(Type::string()),
+            ],
             'role' => [
                 'name' => 'role',
                 'type' =>  Type::nonNull(Type::int()),
@@ -56,6 +65,7 @@ class CreateUserMutation extends Mutation
     {
         $user = new User();
         $user->fill($args);
+        $user->password = $args['password'];
         $user->save();
 
         return $user;

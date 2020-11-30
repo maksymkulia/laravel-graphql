@@ -95,16 +95,30 @@ return [
     //
     'schemas' => [
         'default' => [
+            'query' => [],
+            'mutation' => [
+                'loginUser'  => \App\GraphQL\Mutations\LoginMutation::class,
+            ],
+            'middleware' => [],
+            'method' => ['get', 'post'],
+        ],
+        'profile' => [
+            'query' => [],
+            'mutation' => [
+                'createTransaction' => \App\GraphQL\Mutations\CreateTransactionMutation::class,
+            ],
+            'middleware' => ['gauth:user'],
+            'method' => ['post'],
+        ],
+        'admin' => [
             'query' => [
-                'user' => App\GraphQL\Queries\UserQuery::class,
-                'users' => App\GraphQL\Queries\UsersQuery::class,
-                'transaction' => App\GraphQL\Queries\TransactionQuery::class,
+                'list' => App\GraphQL\Queries\UsersQuery::class,
             ],
             'mutation' => [
                 'createUser'  => \App\GraphQL\Mutations\CreateUserMutation::class,
             ],
-            'middleware' => [],
-            'method' => ['get', 'post'],
+            'middleware' => ['gauth:admin'],
+            'method' => ['post'],
         ],
     ],
 
@@ -120,8 +134,8 @@ return [
     'types' => [
         'User' => App\GraphQL\Types\UserType::class,
         'Transaction' => App\GraphQL\Types\TransactionType::class,
-        // 'relation_example'  => ExampleRelationType::class,
-        // \Rebing\GraphQL\Support\UploadType::class,
+        'LoginResponse' => \App\GraphQL\Types\LoginResponseType::class,
+        'LoginInput' => \App\GraphQL\InputObjects\LoginInput::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

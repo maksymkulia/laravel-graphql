@@ -11,7 +11,7 @@ use Rebing\GraphQL\Support\Query;
 
 class UsersQuery extends Query
 {
-    protected $attributes = [
+    protected array $attributes = [
         'name' => 'users',
     ];
 

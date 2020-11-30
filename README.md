@@ -5,7 +5,9 @@ This projects implements a very basic payment emulation mechanism and role manag
 - This project is covering TDD on Laravel 8 with GraphQL package.
 - No views involved, use graphql.
 - Please use PHP 7.4+.
-- No Auth used.
+
+## Wiki
+Please visit Wiki page to see how to cook this app: [Link](https://github.com/maksymkulia/laravel-graphql/wiki/Cooking)
 
 ## Quick start
 1. Run ``git clone https://github.com/maksymkulia/laravel-graphql.git``.
@@ -32,7 +34,7 @@ Run ``php artisan test``.
 - Feature tests.
 
 ## Security
-SQLmap tested. Other in process.
+SQLmap tested.
 
 ## Other
 Please follow the state of the project by this [link](https://github.com/maksymkulia/laravel-graphql/projects/1).

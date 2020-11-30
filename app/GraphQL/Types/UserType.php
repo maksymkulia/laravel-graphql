@@ -11,10 +11,10 @@ use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class UserType extends GraphQLType
 {
-    protected $attributes = [
-        'name'          => 'User',
-        'description'   => 'A user',
-        'model'         => User::class
+    protected array $attributes = [
+        'name' => 'User',
+        'description' => 'A user',
+        'model' => User::class
     ];
 
     public function fields(): array
