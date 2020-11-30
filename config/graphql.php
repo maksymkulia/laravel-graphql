@@ -95,18 +95,14 @@ return [
     //
     'schemas' => [
         'default' => [
-            'query' => [
-                // 'user' => App\GraphQL\Queries\UserQuery::class,
-                'users' => App\GraphQL\Queries\UsersQuery::class,
-                // 'transaction' => App\GraphQL\Queries\TransactionQuery::class,
-            ],
+            'query' => [],
             'mutation' => [
                 'loginUser'  => \App\GraphQL\Mutations\LoginMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
         ],
-        'authenticated' => [
+        'profile' => [
             'query' => [],
             'mutation' => [],
             'middleware' => ['gauth'],
