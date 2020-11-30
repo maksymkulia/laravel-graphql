@@ -104,9 +104,11 @@ return [
         ],
         'profile' => [
             'query' => [],
-            'mutation' => [],
-            'middleware' => ['gauth'],
-            'method' => ['get', 'post'],
+            'mutation' => [
+                'createTransaction' => \App\GraphQL\Mutations\CreateTransactionMutation::class,
+            ],
+            'middleware' => ['gauth:user'],
+            'method' => ['post'],
         ],
         'admin' => [
             'query' => [
