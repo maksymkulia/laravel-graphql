@@ -95,21 +95,17 @@ return [
     //
     'schemas' => [
         'default' => [
-            'query' => [
-                // 'user' => App\GraphQL\Queries\UserQuery::class,
-                'users' => App\GraphQL\Queries\UsersQuery::class,
-                // 'transaction' => App\GraphQL\Queries\TransactionQuery::class,
-            ],
+            'query' => [],
             'mutation' => [
                 'loginUser'  => \App\GraphQL\Mutations\LoginMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
         ],
-        'authenticated' => [
+        'profile' => [
             'query' => [],
             'mutation' => [],
-            'middleware' => ['auth'],
+            'middleware' => ['gauth'],
             'method' => ['get', 'post'],
         ],
         'admin' => [
@@ -119,8 +115,8 @@ return [
             'mutation' => [
                 'createUser'  => \App\GraphQL\Mutations\CreateUserMutation::class,
             ],
-            'middleware' => ['auth', 'admin'],
-            'method' => ['get', 'post'],
+            'middleware' => ['gauth:admin'],
+            'method' => ['post'],
         ],
     ],
 
