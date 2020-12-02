@@ -42,3 +42,5 @@ Please follow the state of the project by this [link](https://github.com/maksymk
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Laravel wrapper for Facebook's GraphQL [https://github.com/rebing/graphql-laravel](https://github.com/rebing/graphql-laravel) licensed under the [MIT license](https://opensource.org/licenses/MIT).
